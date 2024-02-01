@@ -50,7 +50,7 @@ app.use(session({
             return done(null, user)
         }
         else {
-            return done(null, profile)
+            return done(null, user)
         }
     } catch (error) {
         return done(error, false)
@@ -82,7 +82,7 @@ async (accessToken, refreshToken, profile, done) => {
         return done(null, user)
     }
     else {
-        return done(null, profile)
+        return done(null, user)
     }
 } catch (error) {
     return done(error, false)
@@ -114,7 +114,7 @@ async (accessToken, refreshToken, profile, done) => {
         return done(null, user)
     }
     else {
-        return done(null, profile)
+        return done(null, user)
     }
 } catch (error) {
     return done(error, false)
